@@ -1,3 +1,4 @@
 #!/bin/bash
-screen -S ServerName server.sh
-exit
+while true; do
+    java -server -Xmx2G -DenableDebugMethodProfiler=true -jar spigot.jar -nogui
+done;

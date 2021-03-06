@@ -74,9 +74,13 @@ sudo read -p "[$CYAN WAITING $NORMAL] What Type do you want? (type Spigot): " AW
 if [ "$AWNSER3" = "Spigot" ] 
 	then
 	mkdir /~/MC/$AWNSER2
+	echo "[$BLUE INFO $NORMAL] Installing Scripts..."
 	wget -O /~/MC/$AWNSER2/start.sh https://github.com/Pierre-Rene-07/MC-Server-Installer/blob/903033f9a0346c6083071fcd36e8d1fe91372cf0/Spigot/start.sh > /dev/null 2>&1
 	wget -O /~/MC/$AWNSER2/server.sh https://github.com/Pierre-Rene-07/MC-Server-Installer/blob/903033f9a0346c6083071fcd36e8d1fe91372cf0/Spigot/server.sh > /dev/null 2>&1
-	wget -O /~/MC/$AWNSER2/spigot.sh https://cdn.getbukkit.org/spigot/spigot-$VERSION.jar
+	echo "[$GREEN OK $NORMAL] Scripts installed."
+	echo "[$BLUE INFO $NORMAL] Installing Spigot.jar..."
+	wget -O /~/MC/$AWNSER2/spigot.sh https://cdn.getbukkit.org/spigot/spigot-$VERSION.jar > /dev/null 2>&1
+	echo "[$GREEN OK $NORMAL] Spigot.jar installed."
 else
 	echo "[$BLUE INFO $NORMAL] That is not a valid Server-Software"
 fi

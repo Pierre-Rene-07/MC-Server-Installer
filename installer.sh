@@ -13,7 +13,7 @@ NORMAL=$(tput sgr0)      #
 ##########################
 ##########Checking Java####################################################################
 ###########################################################################################
-NEEDED1=$();
+NEEDED1=$(java -version 2>&1 | grep version | cut -d'"' -f2 | cut -d "." -f 1);
 NEEDED2=$();
 if [ "$NEEDED1" == "" ] 
 then
@@ -65,11 +65,11 @@ fi
 #######################################################################################################################################################
 ##########Getting Informations#########################################################################################################################
 echo "[$BLUE INFO $NORMAL] Installing of Server..."
-sudo read -p "[$CYAN WAITING $NORMAL] What the servers name should be?: " AWNSER2
-sudo read -p "[$CYAN WAITING $NORMAL] What Type do you want? (type Spigot): " AWNSER3
+read -p "[$CYAN WAITING $NORMAL] What the servers name should be?: " AWNSER2
+read -p "[$CYAN WAITING $NORMAL] What Type do you want? (type Spigot): " AWNSER3
 	echo "[$BLUE INFO $NORMAL] You Selected $AWNSER3"
 	sudo mkdir /home/MC/$AWNSER2;
-	sudo read -p "[$CYAN WAITING $NORMAL] What Version do you want? (1.xx.xx) z.b. 1.12.2 : " VERSION
+	read -p "[$CYAN WAITING $NORMAL] What Version do you want? (1.xx.xx) z.b. 1.12.2 : " VERSION
 ##########When selected  Spigot#######################################################################################################################
 if [ "$AWNSER3" = "Spigot" ] 
 	then

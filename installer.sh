@@ -66,10 +66,9 @@ fi
 ##########Getting Informations#########################################################################################################################
 echo "[$BLUE INFO $NORMAL] Installing of Server..."
 read -p "[$CYAN WAITING $NORMAL] What the servers name should be?: " AWNSER2
-DIR=$(~/MC/$AWNSER2) > /dev/null 2>&1
 read -p "[$CYAN WAITING $NORMAL] What Type do you want? (type Spigot): " AWNSER3
 	echo "[$BLUE INFO $NORMAL] You Selected $AWNSER3"
-	mkdir ~/MC/$AWNSER2;
+	mkdir -p ~/MC/$AWNSER2;
 	DIR=$(~/MC/$AWNSER2) > /dev/null 2>&1
 	read -p "[$CYAN WAITING $NORMAL] What Version do you want? (1.xx.xx) z.b. 1.12.2 : " VERSION
 ##########When selected  Spigot#######################################################################################################################

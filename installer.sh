@@ -66,19 +66,20 @@ fi
 ##########Getting Informations#########################################################################################################################
 echo "[$BLUE INFO $NORMAL] Installing of Server..."
 read -p "[$CYAN WAITING $NORMAL] What the servers name should be?: " AWNSER2
+DIR=$(/~/MC/$AWNSER2)
 read -p "[$CYAN WAITING $NORMAL] What Type do you want? (type Spigot): " AWNSER3
 	echo "[$BLUE INFO $NORMAL] You Selected $AWNSER3"
-	sudo mkdir /~/MC/$AWNSER2;
+	mkdir $DIR;
 	read -p "[$CYAN WAITING $NORMAL] What Version do you want? (1.xx.xx) z.b. 1.12.2 : " VERSION
 ##########When selected  Spigot#######################################################################################################################
 if [ "$AWNSER3" = "Spigot" ] 
 	then
 	echo "[$BLUE INFO $NORMAL] Installing Scripts..."
-	wget -O /~/MC/$AWNSER2/start.sh http://destiny-world.eu/Downloads/scripts/Spigot/start.sh > /dev/null 2>&1
-	wget -O /~/MC/$AWNSER2/server.sh http://destiny-world.eu/Downloads/scripts/Spigot/server.sh > /dev/null 2>&1
+	wget -O $DIR/start.sh http://destiny-world.eu/Downloads/scripts/Spigot/start.sh > /dev/null 2>&1
+	wget -O $DIR/server.sh http://destiny-world.eu/Downloads/scripts/Spigot/server.sh > /dev/null 2>&1
 	echo "[$GREEN OK $NORMAL] Scripts installed."
 	echo "[$BLUE INFO $NORMAL] Installing Spigot.jar..."
-	wget -O /~/MC/$AWNSER2/spigot.jar https://cdn.getbukkit.org/spigot/spigot-$VERSION.jar > /dev/null 2>&1
+	wget -O $DIR/spigot.jar https://cdn.getbukkit.org/spigot/spigot-$VERSION.jar > /dev/null 2>&1
 	echo "[$GREEN OK $NORMAL] Spigot.jar installed."
 else
 	echo "[$BLUE INFO $NORMAL] That is not a valid Server-Software"
@@ -86,7 +87,7 @@ fi
 	read -p "[$CYAN WAITING $NORMAL] Did you like to start the Server? (y/n): " AWNSER5
 	if [ "$AWNSER5" = "y" ]
 	then
-	cd /~/MC/$AWNSER2/
+	cd $DIR/
 	./start.sh
 	exit
 	else

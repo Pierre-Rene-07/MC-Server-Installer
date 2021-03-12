@@ -80,7 +80,7 @@ if [ "$AWNSER3" = "Spigot" ]
 	wget -O $DIR/$AWNSER2/server.sh http://destiny-world.eu/Downloads/scripts/Spigot/server.sh > /dev/null 2>&1
 	echo "[$GREEN OK $NORMAL] Scripts installed."
 	echo "[$BLUE INFO $NORMAL] Installing Spigot.jar..."
-	wget -O $DIR/$AWNSER2/spigot.sh https://cdn.getbukkit.org/spigot/spigot-$VERSION.jar > /dev/null 2>&1
+	wget -O $DIR/$AWNSER2/spigot.jar https://cdn.getbukkit.org/spigot/spigot-$VERSION.jar > /dev/null 2>&1
 	echo "[$GREEN OK $NORMAL] Spigot.jar installed."
 else
 	echo "[$BLUE INFO $NORMAL] That is not a valid Server-Software"
